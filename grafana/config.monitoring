@@ -1,2 +1,25 @@
 GF_SECURITY_ADMIN_PASSWORD=foobar
 GF_USERS_ALLOW_SIGN_UP=false
+GF_SMTP_USER=alerts@cancoillotte.space
+GF_SMTP_PASSWORD=7UXRDmyY177wpzts0KIp
+GF_SMTP_HOST=mail.cancoillotte.space:25
+GF_SMTP_ENABLED=true
+GF_SMTP_FROM_ADDRESS=alerts@cancoillotte.space
+
+GF_SERVER_ROOT_URL=https://graph.cancoillotte.space
+GF_SERVER_ENABLE_GZIP=true
+GF_SERVER_REPORTING_ENABLED=false
+GF_SERVER_OAUTH_AUTO_LOGIN=true
+
+# Keycloak configuration
+GF_AUTH_GENERIC_OAUTH_ENABLED=true
+GF_AUTH_GENERIC_OAUTH_ALLOW_SIGN_UP=true
+GF_AUTH_GENERIC_OAUTH_TEAM_IDS=
+GF_AUTH_GENERIC_OAUTH_ALLOWED_ORGANIZATIONS=
+GF_AUTH_GENERIC_OAUTH_NAME=Keycloak
+GF_AUTH_GENERIC_OAUTH_CLIENT_ID=grafana
+GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET=a0442b80-0d74-4129-9834-439bb6beb1e2
+GF_AUTH_GENERIC_OAUTH_SCOPES=openid profile email
+GF_AUTH_GENERIC_OAUTH_AUTH_URL=https://keycloak.cancoillotte.space/auth/realms/master/protocol/openid-connect/auth
+GF_AUTH_GENERIC_OAUTH_TOKEN_URL=https://keycloak.cancoillotte.space/auth/realms/master/protocol/openid-connect/token
+GF_AUTH_GENERIC_OAUTH_API_URL=https://keycloak.cancoillotte.space/auth/realms/master/protocol/openid-connect/userinfo

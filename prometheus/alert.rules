@@ -12,11 +12,11 @@ groups:
       summary: "Instance {{ $labels.instance }} down"
       description: "{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 2 minutes."
 
-  - alert: high_load
-    expr: node_load1 > 0.5
+  - alert: disk_full
+    expr: (1-(node_filesystem_free_bytes {job="node-exporter", instance=~".*9100", device=~"/dev/.*", mountpoint!="/var/lib/docker/aufs"} / node_filesystem_size_bytes))* 100 > 90
     for: 2m
     labels:
       severity: page
     annotations:
-      summary: "Instance {{ $labels.instance }} under high load"
-      description: "{{ $labels.instance }} of job {{ $labels.job }} is under high load."
+      summary: "Hard Drive free space under 10%"
+      description: "Hard Drive free space under 10%"
