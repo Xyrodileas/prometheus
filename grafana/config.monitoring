@@ -2,7 +2,7 @@ GF_SECURITY_ADMIN_PASSWORD=foobar
 GF_USERS_ALLOW_SIGN_UP=false
 GF_SMTP_USER=alerts@cancoillotte.space
 GF_SMTP_PASSWORD=7UXRDmyY177wpzts0KIp
-GF_SMTP_HOST=mail.cancoillotte.space:25
+GF_SMTP_HOST=mail.cancoillotte.space:587
 GF_SMTP_ENABLED=true
 GF_SMTP_FROM_ADDRESS=alerts@cancoillotte.space
 
