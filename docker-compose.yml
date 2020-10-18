@@ -57,10 +57,7 @@ services:
       - "traefik.http.middlewares.openid-prometheus-ui.forwardauth.tls.insecureSkipVerify=true"
       - "traefik.http.middlewares.openid-prometheus-ui.forwardauth.authResponseHeaders=X-Forwarded-User"
       - "traefik.http.routers.prometheus-ui-secure.middlewares=openid-prometheus-ui"
-#    deploy:
-#      placement:
-#        constraints:
-#          - node.hostname == ${HOSTNAME}
+
 
   node-exporter:
     image: prom/node-exporter
@@ -93,10 +90,7 @@ services:
     command:
       - '--config.file=/etc/alertmanager/config.yml'
       - '--storage.path=/alertmanager'
-#    deploy:
-#      placement:
-#        constraints:
-#          - node.hostname == ${HOSTNAME}
+
   cadvisor:
     image: google/cadvisor
     #name: cadvisor
